@@ -1,0 +1,18 @@
+ /* Estilo para o cabeçalho */
+ header {
+    background-color: #7CAABA; /* Cor de fundo do cabeçalho */
+    height: 100px; /* Altura do cabeçalho */
+    width: 100%; /* Largura total */
+    display: flex; /* Exibe os elementos em linha */
+    justify-content: center; /* Centraliza os elementos horizontalmente */
+    align-items: center; /* Centraliza os elementos verticalmente */
+}
+
+.background-image {
+    background-image: url('/img/fundo.png');
+    background-size: cover;
+    background-position: center;
+    height: calc(100vh - 60px); /* Altura da janela - altura do cabeçalho */
+    width: 100%;
+}
+
