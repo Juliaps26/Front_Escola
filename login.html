@@ -5,9 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./css/login.css">
+
     <!-- Logo da pagina -->
     <link rel="icon" href="./img/logo.png" type="image/x-icon">
     <title>Login</title>
+
+<!-- Fontes -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap" rel="stylesheet">
+
 </head>
 
 <body class="bg-[#7CAABA]">
@@ -41,27 +49,27 @@
 
 
             <!-- Divisão com cor de fundo -->
-            <div class="flex bg-white rounded-r-2xl shadow-lg w-[435px] h-[60vh] p-10 justify-center relative">
+            <div class="bg-white rounded-r-2xl shadow-lg w-[435px] h-[60vh] p-10 justify-center relative">
                <!-- Texto bem-vindo -->
-                <h1 class="self-start mt-10 text-lg">Bem vindo a Escola Ideal</h1>
+                <h1 id="texto" class="mt-10 text-lg items-center justify-center flex">Bem vindo a <br> Escola Ideal</h1>
 
 <!-- Para inserir email e senha -->
 
- <div class="flex flex-col justify-center items-center mr-[10vh] w-full">
-            <input class="bg-black mb-2 w-full" type="text" placeholder="Email" name="" id="">
-            <input class="bg-blue-600 w-full" placeholder="Senha" type="text">
+        <div class="flex flex-col h-full justify-center items-center" id="inputs">
+            <input class=" w-full" type="text" placeholder="Email" name="" id="email">
+            <input class="w-full" placeholder="Senha" type="text" id="senha">
         </div>
 
         <!-- Botão para entrar -->
-        <div class="mt-auto flex justify-center">
-             <button class="bg-[#99E5FF] rounded-xl text-white py-2 hover:scale-105 duration-300">
-            <a href="./html/tela-iniciais/inicio.html" class="flex justify-center items-center w-full h-full text-black">Entrar</a>
+        <div class="flex justify-center" id="div-botao">
+             <button class="bg-[#99E5FF] rounded-xl  hover:scale-105 duration-300" id="botao">
+            <a href="./html/tela-iniciais/inicio.html" class="flex justify-center items-center text-black">Entrar</a>
         </button>
         </div>
 
        
 <!-- Área do professor -->
-<a class="absolute bottom-0 right-0 p-4" href="./html/logins/prof-login.html">Área do Professor</a>
+<a id="texto1" class="absolute bottom-0 right-0 p-4" href="./html/logins/prof-login.html">Área do Professor</a>
 
             </div>
         </div>

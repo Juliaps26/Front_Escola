@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/css/login-adm.css">
+
     <!-- Logo da pagina -->
     <link rel="icon" href="./img/logo.png" type="image/x-icon">
     <title>Administração</title>
@@ -36,14 +38,25 @@
             <!-- Divisão com cor de fundo -->
             <div class="flex bg-white rounded-l-2xl shadow-lg w-[435px] h-[60vh] p-10 justify-center relative">
                <!-- Texto bem-vindo -->
-                <h1 class="self-start mt-10 text-lg">Administraçao</h1>
+                <h1 id="texto" class="justify-center flex items-center mt-10 text-lg">Administraçao</h1>
 
 <!-- Para inserir email e senha -->
 
+<div class="flex flex-col h-full justify-center items-center" id="inputs">
+    <input class=" w-full" type="text" placeholder="Email" name="" id="email">
+    <input class="w-full" placeholder="Senha" type="text" id="senha">
+</div>
+
+
 <!-- Botão para entrar -->
+ <div class="flex justify-center" id="div-botao">
+    <button class="bg-[#99E5FF] rounded-xl hover:scale-105 duration-300" id="botao">
+   <a href="../tela-iniciais/inicio-adm.html" class="flex justify-center items-center text-black">Entrar</a>
+</button>
+</div>
 
 <!-- Área do professor -->
-<a class="absolute bottom-0 left-0 p-4" href="./prof-login.html">Área do Professor</a>
+<a id="texto1" class="absolute bottom-0 left-0 p-4" href="./prof-login.html">Área do Professor</a>
 
             </div>
 
@@ -53,7 +66,7 @@
               <div
               class="flex bg-gradient-to-r bg-[#99E5FF] rounded-r-2xl shadow-lg w-[435px] h-[60vh] p-10 items-center relative">
               <div class="absolute inset-0 bg-cover bg-center flex justify-center items-center">
-                  <img class="flex h-[328px] w-[619px] justify-center items-center " src="/img/adm-login.png"alt="Imagem Login">
+                  <img class="flex w-full justify-center items-center " src="/img/login-adm.png"alt="Imagem Login">
               </div>
           </div>
 
