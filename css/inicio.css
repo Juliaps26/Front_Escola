@@ -1,3 +1,10 @@
+*{
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+ 
+ 
  /* Estilo para o cabeçalho */
  header {
     background-color: #7CAABA; /* Cor de fundo do cabeçalho */
@@ -8,17 +15,48 @@
     align-items: center; /* Centraliza os elementos verticalmente */
 }
 
-/* .background-image {
-    background-image: url('/img/fundo.png');
-    background-size: cover;
-    background-position: center;
-    height: calc(100vh - 60px); /* Altura da janela - altura do cabeçalho */
-    /* width: 100%; */
-/* }  */
-/* */ 
 #background{
     width: 100%;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+}
+
+
+nav li a{
+    background-color: #7CAABA;
+    height: 10vh;
+
+}
+
+
+/* Mexendo no li */
+nav li{
+display: inline-block;
+
+}
+
+/* Quando passar o mouse em cima se tiver texto no a */
+nav li a:hover{
+    background-color: white;
+}
+
+.dropdown-menu{
+    position: absolute;
+    border: 1px solid black;
+    box-shadow:  0 0 2px black;
+    display: none;
+}
+
+.dropdown-menu a{
+    display: block;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+}  
+
+/* Quando passar o mouse em cima */
+.dropdown:hover  .dropdown-menu{
+    display: block;
 }

@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tela</title>
+
     <link rel="stylesheet" href="/css/inicio.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Logo da pagina -->
     <link rel="icon" href="/img/logo.png" type="image/x-icon">
     <script src="/js/fundos/inicio.js" type="module" defer></script>
-   
+    <script src="/js/home/aluno.js" type="module" defer></script>
+
 </head>
 <body style="margin: 0">
 
@@ -21,10 +23,45 @@
         <!-- Texto -->
         <h1 class="ml-2 text-lg">Escola Ideal</h1>
 
-        <div class="flex justify-end  top-0 right-0 p-4">
-            <!-- Imagem para abrir as opções de acesso -->
-            <img src="/img/categorias.png" alt="" class="h-[70px]  w[70px] cursor-pointer">
-        </div>
+        <nav class="absolute top-0 right-0 mt-4 mr-20">
+            <ul>
+                <li class="dropdown">
+                    <a href="">
+                        <img src="/img/categorias.png" alt="">
+                    </a>
+                    <!-- Categorias -->
+                    <div class="dropdown-menu">
+
+                        <a href="">
+                            <img src="/img/boletim-aluno.png" alt="">
+                            Boletim
+                        </a>
+
+                        <a href="">
+                            <img src="/img/disciplinas-alunos.png" alt="">
+                            Disciplinas
+                        </a>
+
+                        <a href="">
+                            <img src="/img/comunicados-aluno.png" alt="">
+                            Comunicados
+                        </a>
+
+                        <a href="">
+                            <img src="/img/transferencia-aluno.png" alt="">
+                            Transferências
+                        </a>
+
+                        <a href="../perfils/aluno.html">
+                            <img src="/img/perfil-aluno.png" alt="">
+                            Perfil do Aluno
+                        </a>
+
+                    </div>
+                </li>
+            </ul>
+        </nav>
+
 
     </header>
     

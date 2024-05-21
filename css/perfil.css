@@ -1,0 +1,13 @@
+/* Arquivo para estilizar os perfis */
+
+#fotoContainer{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-self: center;
+}
+.info{
+    text-align: center;
+}
+
+
