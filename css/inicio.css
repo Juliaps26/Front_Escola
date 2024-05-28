@@ -15,11 +15,42 @@
     align-items: center; /* Centraliza os elementos verticalmente */
 }
 
-#background{
+/* Texto nome da escola */
+#nome-escola{
+    font-family: "Livvic", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 2.4vh;
+}
+
+
+/* Contêiner principal */
+.app {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -20;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Equivalente a h-screen */
+}
+
+/* Predefinições para a imagem de fundo */
+.background {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
     width: 100%;
+    height: 100%;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    opacity: 0.45;
 }
 
 
@@ -56,7 +87,28 @@ nav li a:hover{
     justify-items: center;
 }  
 
+
 /* Quando passar o mouse em cima */
 .dropdown:hover  .dropdown-menu{
     display: block;
 }
+
+
+main{
+   
+    
+}
+
+
+/* Logo de fundo  */
+  .logo-fundo {
+     display: flex;
+     justify-content: center;
+    align-items: center;
+
+        }
+        .logo-fundo img {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }

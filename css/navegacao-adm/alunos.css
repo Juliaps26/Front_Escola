@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   }
+    
+    
+    /* Estilo para o cabeçalho */
+    header {
+       background-color: #7CAABA; /* Cor de fundo do cabeçalho */
+       height: 100px; /* Altura do cabeçalho */
+       width: 100%; /* Largura total */
+       display: flex; /* Exibe os elementos em linha */
+       justify-content: center; /* Centraliza os elementos horizontalmente */
+       align-items: center; /* Centraliza os elementos verticalmente */
+   }
+   
+   /* Texto nome da escola */
+   #nome-escola{
+       font-family: "Livvic", sans-serif;
+       font-weight: 700;
+       font-style: normal;
+       font-size: 2.4vh;
+   }
+   

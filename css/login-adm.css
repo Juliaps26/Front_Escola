@@ -1,9 +1,9 @@
 /* Texto - Administração */
 #texto{
-    font-family: "Sawarabi Mincho", serif;
-    font-weight: 500;
+    font-family: "Livvic", sans-serif;
+    font-weight: 700;
     font-style: normal;
-    font-size: 20px;
+    font-size: 2vh;
 }
 
 
@@ -20,8 +20,7 @@
 #inputs{
     gap: 30px;
     display: flex;
-
-
+    margin: -70px;
 }
 
 #email, #senha{
@@ -43,10 +42,16 @@ height: 43px;
 
 #div-botao{
     display: flex;
+    margin: -10vh;
 }
-
 #botao{
     width: 198px;
     height: 50px;
     border-radius: 12px;
+}
+
+#entrar{
+    font-family: "Livvic", sans-serif;
+    font-weight: 700;
+    font-style: normal;
 }

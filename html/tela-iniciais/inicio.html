@@ -12,6 +12,11 @@
     <script src="/js/fundos/inicio.js" type="module" defer></script>
     <script src="/js/home/aluno.js" type="module" defer></script>
 
+    <!-- Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Livvic:wght@700&display=swap" rel="stylesheet">
+
 </head>
 <body style="margin: 0">
 
@@ -21,7 +26,7 @@
         <img class="ml-4 h-[90px] w-[80px]" src="/img/logo.png" alt="Logo">
 
         <!-- Texto -->
-        <h1 class="ml-2 text-lg">Escola Ideal</h1>
+        <h1 id="nome-escola" class="ml-2 text-lg">Escola Ideal</h1>
 
         <nav class="absolute top-0 right-0 mt-4 mr-20">
             <ul>
@@ -78,10 +83,10 @@
 
 
         <!-- Imagem de fundo  -->
-        <div id="app" class=" absolute inset-0 -z-20 flex items-center justify-center h-screen ">
-            <div id="background" class="absolute inset-0 w-full overflow-hidden opacity-45">
-            </div>
+        <div id="app" class="app">
+            <div id="background" class="background"></div>
         </div>
+                <img class="logo-fundo" src="/img/logo.png" alt="">
 
     </main>
 </body>

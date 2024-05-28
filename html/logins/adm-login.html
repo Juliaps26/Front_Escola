@@ -10,6 +10,15 @@
     <!-- Logo da pagina -->
     <link rel="icon" href="./img/logo.png" type="image/x-icon">
     <title>Administração</title>
+
+    <!-- Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Livvic:wght@700&display=swap" rel="stylesheet">
+
 </head>
 
 <body class="bg-[#7CAABA]">
@@ -17,7 +26,9 @@
     <!-- Inicio do site  -->
     <header class="top-0 left-0 w-full h-16 flex">
         <!-- Logo -->
-        <img class="flex w-[70px] h-[80px] mt-4" src="/img/logo.png" alt="Logo">
+        <a href="/login.html">
+            <img class="flex w-[70px] h-[80px] mt-4" src="/img/logo.png" alt="Logo">
+        </a>
 
         <div class="absolute top-0 right-0 mt-4 mr-6">
             <!-- Botão para direcionar ao login do adm -->
@@ -30,45 +41,44 @@
 
     <main class="flex justify-center items-center mt-20">
 
-        <div class="flex items-center justify-center">
+        <div class="flex items-center justify-center" id="toggle">
 
-
-    
 
             <!-- Divisão com cor de fundo -->
-            <div class="flex bg-white rounded-l-2xl shadow-lg w-[435px] h-[60vh] p-10 justify-center relative">
-               <!-- Texto bem-vindo -->
-                <h1 id="texto" class="justify-center flex items-center mt-10 text-lg">Administraçao</h1>
+            <div class="bg-white rounded-l-2xl shadow-lg w-[435px] h-[60vh] p-10 justify-center relative">
+                <!-- Texto bem-vindo -->
+                <h1 id="texto" class="justify-center flex items-center mt-10 text-lg">Administração</h1>
 
-<!-- Para inserir email e senha -->
+                <!-- Para inserir email e senha -->
 
-<div class="flex flex-col h-full justify-center items-center" id="inputs">
-    <input class=" w-full" type="text" placeholder="Email" name="" id="email">
-    <input class="w-full" placeholder="Senha" type="text" id="senha">
-</div>
+                <div class="flex flex-col h-full justify-center items-center" id="inputs">
+                    <input class=" w-full" type="text" placeholder="Email" name="" id="email">
+                    <input class="w-full" placeholder="Senha" type="text" id="senha">
+                </div>
 
 
-<!-- Botão para entrar -->
- <div class="flex justify-center" id="div-botao">
-    <button class="bg-[#99E5FF] rounded-xl hover:scale-105 duration-300" id="botao">
-   <a href="../tela-iniciais/inicio-adm.html" class="flex justify-center items-center text-black">Entrar</a>
-</button>
-</div>
+                <!-- Botão para entrar -->
+                <div class="flex justify-center" id="div-botao">
+                    <button class="bg-[#99E5FF] rounded-xl hover:scale-105 duration-300" id="botao">
+                        <a id="entrar" href="../tela-iniciais/inicio-adm.html"
+                            class="flex justify-center items-center text-black">Entrar</a>
+                    </button>
+                </div>
 
-<!-- Área do professor -->
-<a id="texto1" class="absolute bottom-0 left-0 p-4" href="./prof-login.html">Área do Professor</a>
+                <!-- Área do professor -->
+                <a id="texto1" class="absolute bottom-0 left-0 p-4" href="./prof-login.html">Área do Professor</a>
 
             </div>
 
 
 
-              <!-- Divisão com imagem -->
-              <div
-              class="flex bg-gradient-to-r bg-[#99E5FF] rounded-r-2xl shadow-lg w-[435px] h-[60vh] p-10 items-center relative">
-              <div class="absolute inset-0 bg-cover bg-center flex justify-center items-center">
-                  <img class="flex w-full justify-center items-center " src="/img/login-adm.png"alt="Imagem Login">
-              </div>
-          </div>
+            <!-- Divisão com imagem -->
+            <div
+                class="flex bg-gradient-to-r bg-[#99E5FF] rounded-r-2xl shadow-lg w-[435px] h-[60vh] p-10 items-center relative">
+                <div class="absolute inset-0 bg-cover bg-center flex justify-center items-center">
+                    <img class="flex w-full justify-center items-center " src="/img/login-adm.png" alt="Imagem Login">
+                </div>
+            </div>
 
 
 
