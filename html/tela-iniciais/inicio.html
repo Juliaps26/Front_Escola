@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,80 +15,106 @@
 
     <!-- Fontes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Livvic:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Livvic:wght@700&display=swap" rel="stylesheet">
 
 </head>
-<body style="margin: 0">
+
+<body>
 
     <!-- Cabeçalho -->
-    <header class="relative flex items-center justify-start">
-        <!-- Logo -->
-        <img class="ml-4 h-[90px] w-[80px]" src="/img/logo.png" alt="Logo">
+    <header class="relative flex ">
 
-        <!-- Texto -->
-        <h1 id="nome-escola" class="ml-2 text-lg">Escola Ideal</h1>
+        <div class="inicio-logo">
+            <!-- Logo -->
+            <img class="h-[90px] w-[80px]" src="/img/logo.png" alt="Logo">
 
-        <nav class="absolute top-0 right-0 mt-4 mr-20">
+            <!-- Texto -->
+            <h1 id="nome-escola" class="ml-2 text-lg">Escola Ideal</h1>
+
+        </div>
+
+
+        <button id="categoria-button" class="categoria-button">
+            <img src="/img/categorias.png" alt="">
+        </button>
+        <nav id="nav-categoria" class="">
             <ul>
-                <li class="dropdown">
+
+
+                <!-- Categorias -->
+
+                <li>
                     <a href="">
-                        <img src="/img/categorias.png" alt="">
+                        <img src="/img/boletim-aluno.png" alt="">
+                        Boletim
                     </a>
-                    <!-- Categorias -->
-                    <div class="dropdown-menu">
-
-                        <a href="">
-                            <img src="/img/boletim-aluno.png" alt="">
-                            Boletim
-                        </a>
-
-                        <a href="">
-                            <img src="/img/disciplinas-alunos.png" alt="">
-                            Disciplinas
-                        </a>
-
-                        <a href="">
-                            <img src="/img/comunicados-aluno.png" alt="">
-                            Comunicados
-                        </a>
-
-                        <a href="">
-                            <img src="/img/transferencia-aluno.png" alt="">
-                            Transferências
-                        </a>
-
-                        <a href="../perfils/aluno.html">
-                            <img src="/img/perfil-aluno.png" alt="">
-                            Perfil do Aluno
-                        </a>
-
-                    </div>
                 </li>
+
+
+                <li>
+                    <a href="">
+                        <img src="/img/disciplinas-alunos.png" alt="">
+                        Disciplinas
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/html/navegacao-aluno/comunicados.html">
+                        <img src="/img/comunicados-aluno.png" alt="">
+                        Comunicados
+                    </a>
+                </li>
+
+                <li>
+                    <a href="">
+                        <img src="/img/transferencia-aluno.png" alt="">
+                        Transferências
+                    </a>
+                </li>
+
+
             </ul>
+
+            <div class="perfil">
+
+                <a href="../perfils/aluno.html">
+                    <img src="/img/perfil-aluno.png" alt="">
+                    Perfil do Aluno
+                </a>
+            </div>
+
+
+
         </nav>
 
 
+
     </header>
-    
+
 
     <main>
-       
+
         <!-- Voltar para a tela login -->
         <div class="ml-4  mt-6">
             <a href="/login.html">
-            <img src="/img/voltar-preto.png" alt="Voltar para tela de login">
-        </a>
+                <img src="/img/voltar-preto.png" alt="Voltar para tela de login">
+            </a>
         </div>
-        
+
 
 
         <!-- Imagem de fundo  -->
         <div id="app" class="app">
             <div id="background" class="background"></div>
         </div>
-                <img class="logo-fundo" src="/img/logo.png" alt="">
+
+        <div class="fundo-i">
+            <img class="logo-fundo" src="/img/logo.png" alt="">
+
+        </div>
 
     </main>
 </body>
+
 </html>

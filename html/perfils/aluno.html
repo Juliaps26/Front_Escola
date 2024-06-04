@@ -1,83 +1,88 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tela</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tela</title>
 
-    <link rel="stylesheet" href="/css/perfil.css">
-    <link rel="stylesheet" href="/css/inicio.css">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Logo da pagina -->
-    <link rel="icon" href="/img/logo.png" type="image/x-icon">
-    <script src="/js/perfis/aluno.js" type="module" defer></script>
+  <link rel="stylesheet" href="/css/perfil.css">
+  <link rel="stylesheet" href="/css/inicio.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Logo da pagina -->
+  <link rel="icon" href="/img/logo.png" type="image/x-icon">
+  <script src="/js/perfis/aluno.js" type="module" defer></script>
 
-    <script>
-        tailwind.config = {
-          theme: {
-            extend: { 
-              spacing: {
-                // Padronizando o tamanho das fotos dos alunos
-                   fotoWidth: '324px',
-                   fotoHeight: '349px'
-              }
-            }
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          spacing: {
+            // Padronizando o tamanho das fotos dos alunos
+            fotoWidth: '324px',
+            fotoHeight: '349px'
           }
         }
-      </script>
+      }
+    }
+  </script>
 
 
 </head>
-<body style="margin: 0">
 
-    <!-- Cabeçalho -->
-    <header class="relative flex items-center justify-start">
-        <!-- Logo -->
-        <img class="ml-4 h-[90px] w-[80px]" src="/img/logo.png" alt="Logo">
+<body class="h-screen flex flex-col">
 
-        <!-- Texto -->
-        <h1 class="ml-2 text-lg">Escola Ideal</h1>
+  <!-- Cabeçalho -->
+  <header class="relative flex items-center justify-start">
+    <!-- Logo -->
+    <img class="ml-4 h-[90px] w-[80px]" src="/img/logo.png" alt="Logo">
 
-    </header>
+    <!-- Texto -->
+    <h1 class="ml-2 text-lg">Escola Ideal</h1>
 
-    <main>
-       
-        <!-- Voltar para a tela home -->
-        <div class="ml-4  mt-6">
-            <a href="/html/tela-iniciais/inicio.html">
-            <img src="/img/voltar-preto.png" alt="Voltar para tela de login">
-        </a>
-        </div>
+  </header>
 
-        <!-- Foto do aluno -->
-        <div id="fotoContainer"></div>
+  <main class="flex flex-col grow">
 
-        <!-- Informações dos alunos  -->
-        <div class="info">
-    
+    <!-- Voltar para a tela home -->
+    <div class="ml-4  mt-6">
+      <a href="/html/tela-iniciais/inicio.html">
+        <img src="/img/voltar-preto.png" alt="Voltar para tela de login">
+      </a>
+    </div>
+
+
+    <div class="flex  items-center justify-evenly grow">
+      <!-- Foto do aluno -->
+      <div id="fotoContainer"></div>
+
+      <!-- Informações dos alunos  -->
+      <div class="info -translate-y-1/2">
+
         <!-- Nome do aluno -->
-        <div id="p"></div>
+        <p id="p" class="text-center mb-4 text-2xl font-bold"></p>
 
         <!-- Matricula -->
-        <div id="matricula"></div>
+        <p id="matricula"></p>
 
-         <!-- Data de Nascimento -->
-         <div id="data"></div>
+        <!-- Data de Nascimento -->
+        <p id="data"></p>
 
-         <!-- Responsáveis -->
-         <div id="pais"></div>
+        <!-- Responsáveis -->
+        <p id="pais"></p>
 
-         <!-- Endereço -->
-         <div id="endereco"></div>
+        <!-- Endereço -->
+        <p id="endereco"></p>
 
         <!-- Turma -->
-        <div id="turma"></div>
+        <p id="turma"></p>
 
-        </div>
-       
-         
+      </div>
+    </div>
 
-    </main> 
+
+
+  </main>
 
 
 

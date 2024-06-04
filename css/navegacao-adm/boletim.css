@@ -28,6 +28,8 @@ header {
     height: 10vh;
     display: flex;
     align-items: center;
+  
+  
    
 }
 /* Estilizando o botão para voltar  */
@@ -35,31 +37,41 @@ header {
     display: flex;
 
 }
-/* Estilo para o contêiner principal */
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
- 
-}
 
+.texto-professores{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-self: center;
+}
 /* Texto - Alunos */
-.alunos {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-/* Estilo para o contêiner de adicionar aluno */
-/* .adicionar-aluno {
-    display: flex;
+.professores{
+    font-family: "Livvic", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 2.4vh;
+   
 }
 
-.adicionar-aluno a {
-    display: flex; /* Para alinhar o texto e a imagem */
+.adicionar-professor {
+    display: flex;
+    justify-content: end;
+    align-items: end;
+   
+}
+
+.adicionar-professor a {
+    display: flex;
+   
+   
+}
+
+.adicionar-professor img {
+    display: flex;
+    justify-content: end;
+    align-self: flex-end;
   
-/* }  */
-
-
+}
 
 /* Espaços das informações */
 #espacos{

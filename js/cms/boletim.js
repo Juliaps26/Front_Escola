@@ -3,6 +3,10 @@
 // Import das funções
 // import{ } from "./funcoes"
 
+
+// Pegando o input do ano
+const inputAno = document.getElementById('ano')
+
 function criarTr(aluno){
     const tr = document.createElement('tr')
     tr.classList.add('bg-white', 'dark:bg-gray-800', 'dark:border-gray-700')
@@ -79,4 +83,21 @@ function criarTr(aluno){
 }
 
 
-// async function ore
+// Selecionar o ano e filtrar
+async function criarOptionAno(ano){
+    const option = document.createElement('option')
+    option.textContent = ano.serie
+    option.value = ano.id
+
+    return option
+}
+
+
+async function montarAnos(){
+    const anos = await getTurmas()
+    anos.forEach(ano => {
+        const optionAno = criarOptionAno(ano)
+        inputAno.appendChild(optionAno)
+        
+    });
+}

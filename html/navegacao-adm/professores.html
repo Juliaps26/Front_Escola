@@ -6,11 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="/img/logo.png">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="../js/cms.js" type="module" defer></script>
-    <title>Alunos</title>
-    <script src="/js/cms/alunos.js" type="module" defer></script>
+    <title>Profesores</title>
+    <script src="/js/cms/professores.js" type="module" defer></script>
 
-    <link rel="stylesheet" href="/css/navegacao-adm/alunos.css">
+
+        <!-- Fontes -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Livvic:wght@700&display=swap" rel="stylesheet">
+
+
+
+
+    <link rel="stylesheet" href="/css/navegacao-adm/professores.css">
 
 </head>
 
@@ -33,28 +44,22 @@
         <div class="espaco-branco">
             <!-- Botão para voltar -->
       
-            <div class="voltar">
-                <a href="/html/tela-iniciais/inicio-adm.html">
+                <a class="voltar" href="/html/tela-iniciais/inicio-adm.html">
                     <img class="w-[3vh]" src="/img/voltar-preto.png" alt="">
                 </a>
-            </div>
-                
            
 
-            <div class="container">
-                 <div class="alunos">
-                     <h1>
-                Alunos
+                <div class="texto-professores">
+ <h1 class="professores">
+                Professores
             </h1>
+
                 </div>
+
            
-            </div>
-
-               
-
 
             <!-- Botão para adicionar alunos -->
-            <div class="adicionar-aluno">
+            <div class="adicionar-professor">
                 <a href="/html/cadastros/cadastra-alunos.html">
                     <img class="adicionar" src="/img/adicionar.png" alt="">
                 </a>
@@ -69,13 +74,13 @@
                 <thead class="text-xs text-gray-700 uppercase">
                     <tr id="espacos">
                         <th scope="col" class="px-6 py-3">
-                            Matricula
+                            Código
                         </th>
                         <th scope="col" class="px-6 py-3 ">
                             Nome
                         </th>
                         <th scope="col" class="px-6 py-3">
-                            Turma
+                            Disciplinas
                         </th>
                         <th scope="col" class="px-6 py-3 ">
                             Data de Nascimento

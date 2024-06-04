@@ -6,11 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="/img/logo.png">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="../js/cms.js" type="module" defer></script>
-    <title>Alunos</title>
-    <script src="/js/cms/alunos.js" type="module" defer></script>
+    <title>Boletim</title>
+    <script src="/js/cms/boletim.js" type="module" defer></script>
 
-    <link rel="stylesheet" href="/css/navegacao-adm/alunos.css">
+
+        <!-- Fontes -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Livvic:wght@700&display=swap" rel="stylesheet">
+
+
+
+
+    <link rel="stylesheet" href="/css/navegacao-adm/boletim.css">
 
 </head>
 
@@ -33,28 +44,34 @@
         <div class="espaco-branco">
             <!-- Botão para voltar -->
       
-            <div class="voltar">
-                <a href="/html/tela-iniciais/inicio-adm.html">
+                <a class="voltar" href="/html/tela-iniciais/inicio-adm.html">
                     <img class="w-[3vh]" src="/img/voltar-preto.png" alt="">
                 </a>
-            </div>
-                
            
 
-            <div class="container">
-                 <div class="alunos">
-                     <h1>
-                Alunos
+                <div class="texto-professores">
+ <h1 class="professores">
+                Boletim Escolar - Alunos
             </h1>
+
                 </div>
+
            
+
+            
+                <!-- Botão para escolher a serie e filtrar -->
+
+            <div class="flex items-center gap-2">
+                <p class="text-white text-3xl" >Ano :</p>
+                <select class="p-3 outline-none rounded-[15px]  bg-white text-black text-2xl" id="classificacao">
+                    <option disabled value=""> Selecione o ano</option>
+                </select>
             </div>
 
-               
 
 
-            <!-- Botão para adicionar alunos -->
-            <div class="adicionar-aluno">
+<!-- Botão para adicionar alunos -->
+            <div class="adicionar-professor">
                 <a href="/html/cadastros/cadastra-alunos.html">
                     <img class="adicionar" src="/img/adicionar.png" alt="">
                 </a>
@@ -88,7 +105,8 @@
                             Excluir
                         </th>
                         <th scope="col" class="px-6 py-3">
-                            Editar
+                            Ver Boletim
+                            <!-- <img src="/img/boletim-aluno.png" alt=""> -->
                         </th>
                     </tr>
                 </thead>

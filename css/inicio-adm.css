@@ -39,6 +39,9 @@ body {
     text-align: center;
     cursor: pointer;
     transition: transform 0.2s;
+    font-family: "Livvic", sans-serif;
+    font-weight: 700;
+    font-style: normal;
 }
 
 .card:hover {
