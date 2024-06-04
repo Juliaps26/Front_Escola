@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="/css/navegacao-adm/comunicados.css">
-    <script src="/js/cms/comunicados.js" type="module" defer></script>
+    <link rel="stylesheet" href="/css/navegacao-aluno/comunicados.css">
+    <script src="/js/navegacao-aluno/comunicados.js" type="module" defer></script>
 
 
     <!-- Fontes -->
@@ -22,43 +22,34 @@
     <link rel="icon" href="/img/logo.png" type="image/x-icon">
     <title>Comunicados</title>
 </head>
-<body class="bg-[#7CAABA]">
+<body class="">
 
 
- <!-- Inicio do site  -->
- <header class="header">
-
-      <!-- Logo -->
-      <a href="">
-        <img id="logo" class="flex w-[70px] h-[80px] mt-1" src="/img/logo.png" alt="Logo">
-    </a>
-
+  <!-- Cabeçalho -->
+  <header class="relative flex items-center justify-start">
+    <!-- Logo -->
+    <img class="ml-4 h-[90px] w-[80px]" src="/img/logo.png" alt="Logo">
 
     <!-- Texto -->
-    <div class="texto-comunicados">
-      <h1 class="comunicados">Comunicados</h1>  
-    </div>
-    
-
-
-<!-- Botão para adicionar novos comunicados -->
-<div class="adicionar-comunicados">
-    <a href="/html/cadastros/cadastra-comunicados.html">
-        <img class="adicionar" src="/img/adicionar.png" alt="">
-    </a>
-</div>
-
-
+    <h1 id="nome-escola" class="ml-2 text-lg">Escola Ideal</h1>
 
 </header>
 
  <main>
-     <!-- Botão para voltar -->
 
-     <a class="voltar" href="/html/tela-iniciais/inicio-adm.html">
-        <img class="w-[3vh]" src="/img/voltar-preto.png" alt="">
+    <div class="div-comunicados">
+        <h1 class="texto-comunicados">
+            Comunicados
+        </h1>
+    </div>
+
+    <!-- Voltar para a tela home -->
+    <div class="ml-6">
+        <a href="/html/tela-iniciais/inicio-prof.html">
+        <img src="/img/voltar-preto.png" alt="Voltar para tela de login">
     </a>
-
+    </div>
+    
     <div class="cards-container" id="cards-container">
         
     </div>

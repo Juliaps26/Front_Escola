@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        background: '#262626'
+                    },
+                    spacing: {
+                        // Padronizando o tamanho das capas dos filmes 
+                        capaWidth: '350px',
+                        capaHeight: '450px'
+                    }
+                }
+            }
+        }
+    </script>
+    <title>Cadastrar - Falta </title>
+</head>
+
+<body class="bg-[#7CAABA]">
+
+    <header class="flex text-white p-2">
+        <div class="flex ">
+            <!-- Logo  -->
+            <div class="flex pt-2">
+                <img class="ml-[96vh]" src="/img/logo.png" alt="logo">
+            </div>
+        </div>
+
+        
+    </header>
+
+    <main class=" flex justify-center  items-center mt-[20vh]">
+        
+        <div class="flex  justify-around items-center" id="container">
+
+            
+
+            <div class="flex flex-col  gap-4  p-5 mt-5 rounded-lg">
+
+                
+        <!-- Botão para voltar -->
+                <div>
+                    <a class="voltar" href="/html/navegacao-prof/lancar-nota.html">
+                    <img class="w-[3vh]" src="/img/voltar-preto.png" alt="">
+                </a>
+                </div>
+
+
+                <!-- Cadastro de Notas -->
+                <div class="flex items-center gap-2">
+                    <p class="text-white  text-3xl">Falta do dia :</p>
+                    <input type="number" class="outline-none p-3 w-96 rounded-[15px] bg-white text-black text-2xl"
+                        id="titulo">
+                </div>
+
+
+                <div class="flex items-center gap-2">
+                    <p class="text-white  text-3xl">Data: :</p>
+                    <input type="date" class="p-3 outline-none rounded-[15px] bg-white text-black text-2xl"
+                        id="lancamento">
+                </div>
+
+                <button
+                    class="p-3 border-4 mt-6 border-[#ffffFF] text-[#E13434] font-bold hover:bg-[#ECDDA2] hover:text-[#E13434] transition ease-in-out block rounded-full"
+                    id="cadastrar">Salvar Falta</button>
+
+
+                <div>
+
+
+
+
+
+
+
+    </main>
+
+
+</body>
+
+</html>

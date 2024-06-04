@@ -6,9 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="/img/logo.png">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="../js/cms.js" type="module" defer></script>
-    <title>Alunos</title>
-    <script src="/js/cms/alunos.js" type="module" defer></script>
+    <title>Controle de Presença - 2° Ano</title>
+    <script src="/js/navegacao-prof/alunos1ano.js" type="module" defer></script>
 
 
     <!-- Fontes -->
@@ -19,9 +18,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Livvic:wght@700&display=swap" rel="stylesheet">
 
-
-
-    <link rel="stylesheet" href="/css/navegacao-adm/alunos.css">
+<!-- Arquivo css para estilizar a tela que lista os alunos de cada turma -->
+    <link rel="stylesheet" href="/css/notas/anos.css">
 
 </head>
 
@@ -42,31 +40,20 @@
     <main class="bg-red">
 
         <div class="espaco-branco">
-            <!-- Botão para voltar -->
 
+            <!-- Botão para voltar -->
             <div class="voltar">
-                <a href="/html/tela-iniciais/inicio-adm.html">
+                <a href="/html/navegacao-prof/lancar-falta.html">
                     <img class="w-[3vh]" src="/img/voltar-preto.png" alt="">
                 </a>
             </div>
 
 
-
             <div class="texto-alunos">
                 <h1 class="alunos">
-                    Alunos
+                    Controle de Presença - 2° Ano
                 </h1>
 
-            </div>
-
-
-
-
-            <!-- Botão para adicionar alunos -->
-            <div class="adicionar-aluno">
-                <a href="/html/cadastros/cadastra-alunos.html">
-                    <img class="adicionar" src="/img/adicionar.png" alt="">
-                </a>
             </div>
 
 
@@ -95,12 +82,8 @@
                         <th scope="col" class="px-6 py-3">
                             E-mail
                         </th>
-
                         <th scope="col" class="px-6 py-3">
-                            Excluir
-                        </th>
-                        <th scope="col" class="px-6 py-3">
-                            Editar
+                            Lançar Falta
                         </th>
                     </tr>
                 </thead>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Professor</title>
+
+    <link rel="stylesheet" href="/css/telas-home/inicio-prof.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Logo da pagina -->
+    <link rel="icon" href="/img/logo.png" type="image/x-icon">
+    <script src="/js/fundos/inicio-prof.js" type="module" defer></script>
+    <script src="/js/home/prof.js" type="module" defer></script>
+
+    <!-- Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Livvic:wght@700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- Cabeçalho -->
+    <header class="relative flex ">
+
+        <div class="inicio-logo">
+            <!-- Logo -->
+            <img class="h-[90px] w-[80px]" src="/img/logo.png" alt="Logo">
+
+            <!-- Texto -->
+            <h1 id="nome-escola" class="ml-2 text-lg">Escola Ideal</h1>
+
+        </div>
+
+
+        <button id="categoria-button" class="categoria-button">
+            <img src="/img/categorias.png" alt="">
+        </button>
+        <nav id="nav-categoria" class="">
+            <ul>
+
+
+                <!-- Categorias -->
+
+                <li>
+                    <a href="/html/navegacao-prof/turmas.html">
+                        <img src="/img/turmas.png" alt="">
+                        Turmas
+                    </a>
+                </li>
+
+
+                <li>
+                    <a href="/html/navegacao-prof/lancar-nota.html">
+                        <img src="/img/lanca-nota.png" alt="">
+                        Lançar Notas
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/html/navegacao-prof/lancar-falta.html">
+                        <img src="/img/presenca.png" alt="">
+                        Controle de Presença
+                    </a>
+                </li>
+
+                <li>
+                    <a href="">
+                        <img src="/img/grade-aulas.png" alt="">
+                        Grade de Aulas
+                    </a>
+                </li>
+                <li>
+                    <a href="/html/navegacao-prof/comunicados.html">
+                        <img src="/img/presenca.png" alt="">
+                        Comunicados
+                    </a>
+                </li>
+
+
+            </ul>
+
+            <div class="perfil">
+
+                <a href="../perfils/professor.html">
+                    <img src="/img/perfil-aluno.png" alt="">
+                    Perfil do Professor
+                </a>
+            </div>
+
+
+
+        </nav>
+
+
+
+    </header>
+
+
+    <main>
+
+        <!-- Voltar para a tela login -->
+        <div class="ml-4  mt-6">
+            <a href="/login.html">
+                <img src="/img/voltar-preto.png" alt="Voltar para tela de login">
+            </a>
+        </div>
+
+
+
+        <!-- Imagem de fundo  -->
+        <div id="app" class="app">
+            <div id="background" class="background"></div>
+        </div>
+
+       
+
+    </main>
+</body>
+
+</html>

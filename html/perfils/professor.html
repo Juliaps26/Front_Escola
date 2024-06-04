@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfil Professor</title>
+
+  <link rel="stylesheet" href="/css/perfil.css">
+  <link rel="stylesheet" href="/css/inicio.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Logo da pagina -->
+  <link rel="icon" href="/img/logo.png" type="image/x-icon">
+  <script src="/js/perfis/professor.js" type="module" defer></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          spacing: {
+            // Padronizando o tamanho das fotos dos alunos
+            fotoWidth: '324px',
+            fotoHeight: '349px'
+          }
+        }
+      }
+    }
+  </script>
+
+
+</head>
+
+<body class="h-screen flex flex-col">
+
+  <!-- Cabeçalho -->
+  <header class="relative flex items-center justify-start">
+    <!-- Logo -->
+    <img class="ml-4 h-[90px] w-[80px]" src="/img/logo.png" alt="Logo">
+
+    <!-- Texto -->
+    <h1 class="ml-2 text-lg">Escola Ideal</h1>
+
+  </header>
+
+  <main class="flex flex-col grow">
+
+    <!-- Voltar para a tela home -->
+    <div class="ml-4  mt-6">
+      <a href="/html/tela-iniciais/inicio-prof.html">
+        <img src="/img/voltar-preto.png" alt="Voltar para tela de login">
+      </a>
+    </div>
+
+
+    <div class="flex  items-center justify-evenly grow">
+      <!-- Foto do aluno -->
+      <div id="fotoContainer"></div>
+
+      <!-- Informações dos alunos  -->
+      <div class="info -translate-y-1/2">
+
+        <!-- Nome do aluno -->
+        <p id="p" class="text-center mb-4 text-2xl font-bold"></p>
+
+        <!-- Matricula -->
+        <p id="matricula"></p>
+
+        <!-- Data de Nascimento -->
+        <p id="data"></p>
+
+        <!-- Responsáveis -->
+        <p id="pais"></p>
+
+        <!-- Endereço -->
+        <p id="endereco"></p>
+
+        <!-- Turma -->
+        <p id="turma"></p>
+
+      </div>
+    </div>
+
+
+
+  </main>
+
+
+
+
+</body>

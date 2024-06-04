@@ -28,7 +28,6 @@ header {
     height: 10vh;
     display: flex;
     align-items: center;
-    justify-content: space-between;
     padding: 0 1rem;
    
 }
@@ -38,21 +37,24 @@ header {
 
 }
 
-.texto-boletim{
+
+/* Estilo para o contêiner principal */
+.texto-alunos {
     display: flex;
     align-items: center;
     justify-content: center;
-    justify-self: center;
+
+
 }
-/* Texto - Boletim */
-.boletim{
+
+/* Texto - Alunos */
+.alunos {
     font-family: "Livvic", sans-serif;
     font-weight: 700;
     font-style: normal;
     font-size: 2.4vh;
-   
+    justify-content: center;
 }
-
 
 
 /* Espaços das informações */

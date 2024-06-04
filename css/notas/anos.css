@@ -1,3 +1,5 @@
+
+/* Arquivo para estilizar o controle de notas de todas as salas */
 * {
     margin: 0;
     padding: 0;
@@ -27,32 +29,39 @@ header {
 .espaco-branco{
     height: 10vh;
     display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: space-between;
     padding: 0 1rem;
+    padding-right: 800px;
+
    
 }
 /* Estilizando o botão para voltar  */
 .voltar{
     display: flex;
+    justify-content: start;
+    padding-right: 690px;
 
 }
 
-.texto-boletim{
+
+/* Estilo para o contêiner principal */
+.texto-alunos {
     display: flex;
-    align-items: center;
     justify-content: center;
-    justify-self: center;
+    text-align: center;
+    align-items: center;
+
 }
-/* Texto - Boletim */
-.boletim{
+
+/* Texto - Alunos */
+.alunos {
     font-family: "Livvic", sans-serif;
     font-weight: 700;
     font-style: normal;
     font-size: 2.4vh;
-   
+    justify-content: center;
 }
-
 
 
 /* Espaços das informações */
