@@ -6,7 +6,12 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <!-- <link rel="stylesheet" href="../src/input.css">
     <link rel="stylesheet" href="../src/output.css"> -->
+    
 
+    <!-- Fonte popins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
     <script type="module" src="../js/novofilme.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
@@ -21,6 +26,9 @@
                 // Padronizando o tamanho das capas dos filmes 
                    capaWidth: '350px',
                    capaHeight: '450px'
+              },
+              fontFamily:{
+                'popins': ["Poppins", 'sans-serif']
               }
             }
           }
@@ -30,14 +38,20 @@
 </head>
 <body class="bg-[#7CAABA]">
     
-    <header class="flex text-white p-2">
-        <div class="flex ">
-            <!-- Logo  -->
-      <div class="flex pt-2">
-          <img class="ml-[96vh]" src="/img/logo.png" alt="Logo Acme Filmes">
-      </div>
-      </div>
-    </header>
+  <header class="grid grid-rows-2 text-white py-2 px-8">
+    <div class="flex ">
+        <!-- Logo  -->
+        <div class="flex pt-2">
+            <img class="ml-[96vh]" src="/img/logo.png" alt="Logo Acme Filmes">
+        </div>
+    </div>
+
+     <!-- Botão para voltar -->
+  
+     <a class="voltar" href="/html/navegacao-adm/professores.html">
+        <img class="w-[3vh]" src="/img/voltar-preto.png" alt="">
+    </a>
+</header>
 
     <main class=" flex justify-center   items-center ">
 
@@ -46,13 +60,13 @@
         <div class="flex flex-col  gap-4  p-5 mt-5 rounded-lg">
 
             <div class="flex items-center gap-2">
-                <p class="text-white  text-3xl" >Nome do Professor:</p>
+                <p class="text-white font-popins   text-3xl" >Nome do Professor :</p>
                 <input type="text" class="outline-none p-3 w-96 rounded-[15px] bg-white text-black text-2xl" id="titulo">
             </div>
 
     
             <div class="flex items-center gap-2">
-                <p class="text-white  text-3xl" >Data de Nascimento:</p>
+                <p class="text-white font-popins text-3xl" >Data de Nascimento :</p>
                 <input type="date" class="p-3 outline-none rounded-[15px] bg-white text-black text-2xl" id="lancamento">
             </div>
 
@@ -60,24 +74,40 @@
         
 
             <div class="flex items-center gap-2">
-                <p class="text-white  text-3xl" >Email :</p>
-                <input type="text" class="p-3 outline-none rounded-[15px] bg-white text-black text-2xl" id="relancamento">
+                <p class="text-white font-popins  text-3xl" >Email :</p>
+                <input type="email" class="p-3 outline-none rounded-[15px] bg-white text-black text-2xl" id="relancamento">
             </div>
 
            
 
-            <button class="p-3 border-4 mt-6 border-[#ffffFF] text-[#E13434] font-bold hover:bg-[#ECDDA2] hover:text-[#E13434] transition ease-in-out block rounded-full" id="cadastrar">CADASTRAR PROFESSOR</button>
+            <div class="w-full flex items-center justify-center">
+              <button class="p-3 
+                          border-4 
+                          mt-6 
+                          border-[#ffffFF] 
+                          text-[#black] 
+                          font-bold 
+                          hover:bg-black 
+                          hover:text-white
+                          transition 
+                          font-popins
+                          w-fit
+                           ease-in-out 
+                           block 
+                           rounded-full" id="cadastrar">CADASTRAR PROFESSOR
+                          </button>
+                          </div>   
+            
         </div>
 
         <div class="" id="capaFilme">
-            <div class="posterFilme bg-[#7A7A7A] text-[#E13434] h-fit flex flex-col items-center border-4 border-[#ffffFF]">
-                <img id="poster" class="w-64">
-                <!-- <img  class="h-[50vh]" src="../img/filmeex.jpeg" alt="">
-               -->
-                <input type="text" id="link" class="w-full outline-none bg-[#19191A] font-bold" placeholder="Foto do Professor">
-                <button id="button-preview-poster">Exibir Imagem</button>
-            </div>
-        </div>
+          <div class="posterFilme  text-white font-popins rounded-lg overflow-hidden h-fit flex flex-col items-center border-4 border-[#ffffFF]">
+              <img id="poster" class="w-64">
+              
+              <input type="text" id="link" class="w-full text-center outline-none bg-[#19191A] font-bold" placeholder="Foto do Professor">
+              <button id="button-preview-poster">Exibir Imagem</button>
+          </div>
+      </div>
         
 
 

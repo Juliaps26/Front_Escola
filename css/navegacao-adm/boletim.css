@@ -13,7 +13,38 @@ header {
     align-items: center; /* Alinha os elementos ao centro verticalmente */
     padding: 0 20px; /* Espaçamento interno para o cabeçalho */
 }
+select {
+    outline: none;
+    border-radius: 1px;
+    background-color: #fff;
+    color: #000;
+    font-size: 1.2rem; /* 2xl */
+    border: 2px solid #7CAABA; /* Ajuste a cor e a espessura da borda */
+    width: 10vh; /* Ajuste o tamanho conforme necessário */
+    height: 5vh;
+}
 
+/* Estilizando as opções dentro do select */
+select option {
+    font-size: 1rem; /* Ajuste o tamanho da fonte das opções conforme necessário */
+}
+
+/* Estilos adicionais para foco e hover */
+select:focus {
+    border-color: black; /* Cor da borda ao focar */
+}
+
+select:hover {
+    border-color: black; /* Cor da borda ao passar o mouse */
+}
+
+
+#opcao-ano{
+    font-family: "Livvic", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 2vh;
+}
 
 /* Texto nome da escola */
 #nome-escola {

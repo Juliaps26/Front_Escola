@@ -12,8 +12,10 @@ body {
     position: absolute;
     top: 0;
     left: 0;
+    right: 0;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     gap: 16px;
     padding: 16px;
 }
@@ -43,6 +45,7 @@ main {
 
 .adicionar-comunicados{
     display: flex;
+    gap: 12px;
     justify-content: end;
     align-items: end;
 }

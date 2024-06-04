@@ -112,6 +112,7 @@ header nav ul:first-child li a{
 
 .fundo-i{
     position: absolute;
+    z-index: 10;
     width: 100%;
     height: 90vh;
     bottom: 0;
