@@ -1,11 +1,90 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/css/prof-login.css">
+
+    <!-- Logo da pagina -->
+    <link rel="icon" href="/img/logo.png" type="image/x-icon">
+    <title>Login - Professor</title>
+
+<!-- Fontes -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Livvic:wght@700&display=swap" rel="stylesheet">
+
+
 </head>
-<body>
-    <p>oi</p>
+
+<body class="bg-[#7CAABA]">
+
+    <!-- Inicio do site  -->
+    <header class="top-0 left-0 w-full h-16 flex">
+        <!-- Logo -->
+        <img class="flex w-[70px] h-[80px] mt-4" src="/img/logo.png" alt="Logo">
+
+        <div class="absolute top-0 right-0 mt-4 mr-6">
+            <!-- Botão para direcionar ao login do adm -->
+            <a href="/html/logins/adm-login.html">
+                <img src="/img/adm-icon.png" alt="" class="w-auto h-auto">
+            </a>
+        </div>
+    </header>
+
+
+    <main class="flex justify-center items-center mt-20">
+
+        <div class="flex items-center justify-center toggle" id="toggle">
+
+
+            <!-- Divisão com imagem -->
+            <div
+                class="flex bg-gradient-to-r bg-[#99E5FF] rounded-l-2xl shadow-lg w-[435px] h-[60vh] p-10 items-center relative">
+                <div class="absolute inset-0 bg-cover bg-center flex justify-center items-center">
+                    <img class="flex h-[403px] w-[403px] justify-center items-center " src="/img/prof-login.png"alt="Imagem Login">
+                </div>
+            </div>
+
+
+            <!-- Divisão com cor de fundo -->
+            <div class="bg-white rounded-r-2xl shadow-lg w-[435px] h-[60vh] p-10 justify-center relative">
+               <!-- Texto bem-vindo -->
+                <h1 id="texto" class="mt-10 text-lg items-center justify-center flex">Área do<br> Professor</h1>
+
+<!-- Para inserir email e senha -->
+
+        <div class="flex flex-col h-full justify-center items-center" id="inputs">
+            <input class=" w-full" type="text" placeholder="Email" name="" id="email">
+            <input class="w-full" placeholder="Senha" type="text" id="senha">
+        </div>
+
+        <!-- Botão para entrar -->
+        <div class="flex justify-center" id="div-botao">
+             <button class="bg-[#99E5FF] rounded-xl  hover:scale-105 duration-300" id="botao">
+            <a id="entrar" href="/html/tela-iniciais/inicio-prof.html" class="flex justify-center items-center text-black">Entrar</a>
+        </button>
+        </div>
+
+       
+<!-- Área do professor -->
+
+<!-- Depois linkar com a tela de login do professor -->
+<a id="texto1" class="absolute bottom-0 right-0 p-4" href="/login.html">Área do Aluno</a>
+
+            </div>
+        </div>
+
+       
+
+
+    </main>
+
 </body>
+
 </html>

@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <script type="module" src="../js/novofilme.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/css/navegacao-adm/pais.css">
+
 
     <!-- Fonte popins -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -34,7 +35,7 @@
             }
         }
     </script>
-    <title>Cadastro - Aluno </title>
+    <title>Cadastro - Responsável </title>
 </head>
 
 <body class="bg-[#7CAABA]">
@@ -49,19 +50,19 @@
 
         <!-- Botão para voltar -->
 
-        <a class="voltar" href="/html/navegacao-adm/alunos.html">
+        <a class="voltar" href="/html/navegacao-adm/pais.html">
             <img class="w-[3vh]" src="/img/voltar-preto.png" alt="">
         </a>
     </header>
 
-    <main class=" flex justify-center   items-center ">
+    <main class=" flex justify-center items-center ">
 
         <div class="flex  justify-around items-center" id="container">
 
-            <div class="flex flex-col  gap-4  p-5 rounded-lg">
+            <div class="flex flex-col gap-4  p-5 rounded-lg">
 
                 <div class="flex items-center gap-2">
-                    <p class="text-white font-popins text-3xl">Nome do Aluno:</p>
+                    <p class="text-white font-popins text-3xl">Nome do Responsável:</p>
                     <input type="text" class="outline-none p-3 w-96 rounded-[15px] bg-white text-black text-2xl"
                         id="titulo">
                 </div>
@@ -81,9 +82,9 @@
 
 
                 <div class="flex items-center gap-2">
-                    <p class="text-white font-popins text-3xl">Turma :</p>
+                    <p class="text-white font-popins text-3xl">Sexo :</p>
                     <select class="p-3 outline-none rounded-[15px]  bg-white text-black text-2xl" id="classificacao">
-                        <option disabled value=""> Selecione a Turma</option>
+                        <option disabled value=""> Selecione o sexo</option>
                     </select>
                 </div>
 
@@ -95,6 +96,7 @@
                         id="relancamento" placeholder="Logradouro">
 
                 </div>
+                <!-- Endereço  -->
                 <div class="flex items-center gap-2">
                     <input type="text" class="p-3 outline-none rounded-[15px] bg-white text-black text-2xl"
                         id="relancamento" placeholder="Número">
@@ -102,6 +104,17 @@
                         id="relancamento" placeholder="Bairro">
                     <input type="text" class="p-3 outline-none rounded-[15px] bg-white text-black text-2xl"
                         id="relancamento" placeholder="Cidade">
+                </div>
+
+                <div class="flex items-center gap-2">
+                    <p class="text-white font-popins  text-3xl">CPF :</p>
+                    <input type="number" class="p-3 outline-none rounded-[15px] bg-white text-black text-2xl"
+                        id="relancamento">
+                </div>
+                <div class="flex items-center gap-2">
+                    <p class="text-white font-popins  text-3xl">Telefone :</p>
+                    <input type="number" class="p-3 outline-none rounded-[15px] bg-white text-black text-2xl"
+                        id="relancamento">
                 </div>
 
 
@@ -119,22 +132,13 @@
                             w-fit
                              ease-in-out 
                              block 
-                             rounded-full" id="cadastrar">CADASTRAR ALUNO
+                             rounded-full" id="cadastrar">CADASTRAR RESPONSÁVEL
                     </button>
                 </div>
 
             </div>
 
-            <div class="" id="capaFilme">
-                <div
-                    class="posterFilme  text-white font-popins rounded-lg overflow-hidden h-fit flex flex-col items-center border-4 border-[#ffffFF]">
-                    <img id="poster" class="w-64">
-
-                    <input type="text" id="link" class="w-full text-center outline-none bg-[#19191A] font-bold"
-                        placeholder="Foto do Aluno">
-                    <button id="button-preview-poster">Exibir Imagem</button>
-                </div>
-            </div>
+        
 
 
 

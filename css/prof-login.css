@@ -1,0 +1,58 @@
+
+/* Texto - Bem vindo */
+#texto{
+    font-family: "Livvic", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 2.5vh;
+}
+
+/* Texto area do professor */
+#texto1{
+    font-family: "Livvic", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+/* Estilizando os inputs */
+#inputs{
+    gap: 30px;
+    display: flex;
+    margin: -90px;
+
+}
+
+#email, #senha{
+background-color: rgba(217, 217, 217, 1);
+border-radius: 10px;
+width: 316px;
+height: 43px;
+}
+
+/* Mexendo no placeholder */
+#inputs ::placeholder {
+    color: black;
+    opacity: 0.6;
+    padding-left: 20px;
+}
+
+
+/* Estilizando botao para entrar */
+#div-botao{
+    display: flex;
+    margin: -10vh;
+}
+
+#botao{
+    width: 198px;
+    height: 50px;
+    border-radius: 12px;
+}
+
+#entrar{
+    font-family: "Livvic", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
