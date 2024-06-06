@@ -106,28 +106,13 @@ main {
 .card .descricao {
     display: flex;
     margin-top: 2vh;
-
-
 }
 
 
-/* Estilos para o contêiner de data e horário */
-.date-time-container {
-    display: flex;
-    justify-content: space-between;
-    /* Espaça a data e o horário */
-    margin-top: auto;
-    /* Mantém no final do card */
+.card .descricao{
+background-color: #f0f0f0;
 }
 
-/* Estilos para a data */
-.date-time-container .data {
-    margin-right: 8px;
-    /* Espaçamento entre data e horário */
-}
-
-/* Estilos para o horário */
-.date-time-container .horario {
-    margin-left: 8px;
-    /* Espaçamento entre data e horário */
+.card .data{
+    
 }

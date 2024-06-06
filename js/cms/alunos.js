@@ -1,7 +1,9 @@
 'use strict'
 
 // Import das funções
-import{getAlunos} from "./urlAlunos.js"
+import{deleteAluno, getAlunos, getTurmas, postAluno, putAluno} from "./urlAlunos.js"
+
+
 
 function criarTr(aluno){
     console.log(aluno);
@@ -30,11 +32,6 @@ function criarTr(aluno){
     nome.classList.add('px-6', 'py-4', 'bg-gray-50', 'dark:bg-gray-900', 'font-medium', 'text-gray-900', 'whitespace-nowrap' ,'dark:text-white')
     nome.textContent = aluno.nome
 
-    // Turma
-    // const turma = document.createElement('td')
-    // turma.scope = 'row'
-    // turma.classList.add()
-    // turma.textContent = aluno.
 
 //     // Data de Nascimento
     const data_nascimento = document.createElement('td')
@@ -50,38 +47,51 @@ function criarTr(aluno){
     email.textContent = aluno.email
 
     
-    
-//     // Excluir aluno
-// // Guardando o id do aluno
+
+    // Excluir o aluno 
     const id = aluno.id
-    // Criando o elemento
+
+    // Criando elemento
     const deletar = document.createElement('td')
-    deletar.classList.add('px-6', 'py-4')
+    deletar.classList.add('px-6', 'py-4', 'bg-white')
+
     const deletarImg = document.createElement('img')
     deletarImg.classList.add('h-deletarh', 'w-deletarw')
 
-//     // Imagem de excluir
-    // deletarImg.src = '/img/deletar.png'
-    // const deletarBtn = document.createElement('button')
-    // deletarBtn.id = id
-    // deletarBtn.onclick = deletarAluno
 
-//     // Editar 
-//     const editar=document.createElement('td')
-//     editar.classList.add('px-6', 'py-4', 'bg-gray-50', 'dark:bg-gray-800')
-//     const editarImg=document.createElement('img')
-//     editarImg.src='../img/escrever.png'
-//     editarImg.classList.add('h-deletarh', 'w-deletarw')
-//     const editarBtn=document.createElement('button')
-//     editarBtn.id=id
-//     editarBtn.onclick = editarAluno
+    // Imagem
+    deletarImg.src= '/img/deletar.png'
+    const deletarBtn = document.createElement('button')
+    deletarBtn.id = id
+    deletarBtn.onclick = deletarAluno
 
-//     editarBtn.append(editarImg)
-//     editar.append(editarBtn)
-//     deletarBtn.append(deletarImg)
-//     deletar.append(deletarBtn)
+    deletarBtn.append(deletarImg)
+    deletar.append(deletarBtn)
 
-tr.append(matricula, foto_aluno, nome, data_nascimento)
+
+    // Editar aluno
+    const editar = document.createElement('td')
+    editar.classList.add('px-6', 'py-4', 'bg-gray-50', 'dark:bg-gray-800')
+
+    const editarImg = document.createElement('img')
+    editarImg.src = '/img/editar.png'
+    editarImg.classList.add('h-deletarh', 'w-deletarw')
+
+    const editarBtn = document.createElement('button')
+    editarBtn.id = id
+    editarBtn.onclick = editarAluno
+
+    editarBtn.append(editarImg)
+    editar.append(editarBtn)
+
+
+
+
+
+    
+
+
+tr.append(matricula, foto_aluno, nome, data_nascimento, email, deletar, editar)
    
     return tr
 
@@ -97,6 +107,21 @@ async function preencherTela(){
     });
 
 }
+
+//  Função para deletar aluno
+async function deletarAluno(){
+    const idAluno=this.id
+    await deleteAluno(idAluno)
+    window.location.reload()
+}
+
+// Editar
+function editarAluno(){
+    localStorage.setItem('idAluno', this.id)
+    window.location.href="/html/editar/aluno.html"
+}
+
+
 
 
 preencherTela()

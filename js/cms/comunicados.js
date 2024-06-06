@@ -1,5 +1,50 @@
 // Importa a função para obter os comunicados do arquivo urlComunicados.js
-import { getComunicados } from "./urlComunicados.js";
+import { getComunicados, postComunicado } from "./urlComunicados.js";
+
+
+// Pegando os inputs
+
+const inputTema = document.getElementById('tema')
+const inputDescricao = document.getElementById('descricao')
+const inputData = document.getElementById('data')
+
+
+const botaoSalvar = document.getElementById('cadastrar')
+
+// Função para pegar os dados
+function pegarDados(){
+    let JSONcomunicados = {
+        assunto: inputTema.value,
+        data: inputData.value,
+        mensagem: inputDescricao.value
+    }
+
+    // Se não preencher
+    if(inputTema.value == '' || inputData.value == '' || inputDescricao.value == ''){
+        return false
+    } else{
+        return JSONcomunicados
+    }
+}
+
+// Função para inserir um novo comunicado
+
+async function inserirComunicado(){
+    const dadosComunicados = pegarDados()
+    if(dadosComunicados){
+        const resposta = await postComunicado(dadosComunicados)
+        if(resposta){
+            botaoSalvar.textContent = 'Comunicado inserido com sucesso!'
+        } 
+        else
+            botaoSalvar.textContent = 'Houve um erro!'
+        } else {
+            alert('Preencha todos os campos!')
+        }
+    }
+
+
+    
 
 // Função para criar um card
 function createCard(comunicado) {
@@ -14,32 +59,20 @@ function createCard(comunicado) {
 
     // Cria o elemento para a descricao
     const descricao = document.createElement('p');
-    descricao.textContent = comunicado.descricao;
+    console.log(comunicado);
+    descricao.textContent = comunicado.mensagem;
     descricao.className = 'descricao';
     card.appendChild(descricao);
 
-    // Criando contêiner para data e horário
-    const dateTimeContainer = document.createElement('div');
-    dateTimeContainer.className = 'date-time-container';
+    // Criando contêiner para data 
+    const data = document.createElement('p');
+    data.textContent = `Data: ${comunicado.data}`
+    data.className = 'data';
+    card.appendChild(data)
 
-    // Criando elemento para a data se tiver ou não
-    if (comunicado.data) {
-        const data = document.createElement('p');
-        data.className = 'data';
-        data.textContent = `Data: ${comunicado.data}`;
-        dateTimeContainer.appendChild(data);
-    }
-
-    // Criando elemento para o horário se tiver ou não
-    if (comunicado.horario) {
-        const horario = document.createElement('p');
-        horario.className = 'horario';
-        horario.textContent = `Horário: ${comunicado.horario}`;
-        dateTimeContainer.appendChild(horario);
-    }
 
     // Adiciona o contêiner de data e horário ao card
-    card.appendChild(tema);
+    card.appendChild(tema,descricao,data);
 
     return card;
 }
@@ -67,3 +100,5 @@ async function fetchComunicados() {
 
 // Chama a função para buscar os comunicados e criar os cards
 fetchComunicados();
+
+botaoSalvar.addEventListener('click', inserirComunicado)

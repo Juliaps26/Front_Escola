@@ -1,82 +1,112 @@
 'use strict'
 
 // Import das funções
-// import{ } from "./funcoes"
+import{deleteProfessor, getProfessores, postProfessor} from "./urlProfessores.js"
 
-function criarTr(aluno){
+function criarTr(professores){
+
     const tr = document.createElement('tr')
     tr.classList.add('bg-white', 'dark:bg-gray-800', 'dark:border-gray-700')
 
 
     //  Matricula do aluno
-    const matricula = document.createElement('th')
-    matricula.scope = 'row'
-    matricula.classList.add('px-6', 'py-4', 'bg-gray-50', 'dark:bg-gray-900', 'font-medium', 'text-gray-900', 'whitespace-nowrap' ,'dark:text-white')
-    matricula.textContent = aluno.matricula
+    const codigo = document.createElement('td')
+    // matricula.scope = 'row'
+    codigo.classList.add('px-6', 'py-4', 'bg-gray-50', 'dark:bg-gray-900', 'font-medium', 'text-gray-900', 'whitespace-nowrap' ,'dark:text-white')
+    codigo.textContent = professores.id
 
+    
 
     // Nome do aluno
     const nome = document.createElement('td')
     nome.scope = 'row'
     nome.classList.add('px-6', 'py-4', 'bg-gray-50', 'dark:bg-gray-900', 'font-medium', 'text-gray-900', 'whitespace-nowrap' ,'dark:text-white')
-    nome.textContent = aluno.nome
+    nome.textContent = professores.nome
 
     // Turma
-    const turma = document.createElement('td')
-    turma.scope = 'row'
-    turma.classList.add()
-    turma.textContent = aluno.turma
+    // const turma = document.createElement('td')
+    // turma.scope = 'row'
+    // turma.classList.add()
+    // turma.textContent = aluno.
 
-    // Data de Nascimento
+//     // Data de Nascimento
     const data_nascimento = document.createElement('td')
     data_nascimento.classList.add('px-6', 'py-4', 'bg-white')
-    const data_nascimento_exemplo = aluno.data_nascimento
+    const data_nascimento_exemplo = professores.data_nascimento
     data_nascimento.textContent = data_nascimento_exemplo.substring(0,10)
 
 
-    // E-mail 
-    const email = document.createElement('td')
-    email.scope = 'row'
-    email.classList.add()
-    email.textContent = aluno.email
+//     // telefone
+    const telefone = document.createElement('td')
+    telefone.textContent = professores.telefone
 
-    
-    
-    // Excluir aluno
-// Guardando o id do aluno
-    const id = aluno.id
-    // Criando o elemento
-    const deletar = document.createElement('td')
-    deletar.classList.add('px-6', 'py-4')
-    const deletarImg = document.createElement('img')
-    deletarImg.classList.add('h-deletarh', 'w-deletarw')
-
-    // Imagem de excluir
-    deletarImg.src = '/img/deletar.png'
-    const deletarBtn = document.createElement('button')
-    deletarBtn.id = id
-    deletarBtn.onclick = deletarAluno
-
-    // Editar 
-    const editar=document.createElement('td')
-    editar.classList.add('px-6', 'py-4', 'bg-gray-50', 'dark:bg-gray-800')
-    const editarImg=document.createElement('img')
-    editarImg.src='../img/escrever.png'
-    editarImg.classList.add('h-deletarh', 'w-deletarw')
-    const editarBtn=document.createElement('button')
-    editarBtn.id=id
-    editarBtn.onclick = editarAluno
-
-    editarBtn.append(editarImg)
-    editar.append(editarBtn)
-    deletarBtn.append(deletarImg)
-    deletar.append(deletarBtn)
-
-    tr.append(matricula, nome, turma, data_nascimento_exemplo, email, deletar)
    
+
+    const sexo = document.createElement('td')
+    sexo.textContent = professores.id_sexo
+
+
+
+
+   
+tr.append(codigo, nome, data_nascimento, telefone, sexo)
     return tr
 
 }
 
 
-// async function ore
+async function preencherTela(){
+    const table = document.getElementById('tbody')
+    const professores = await getProfessores()
+    professores.forEach(professor => {
+        const tr = criarTr(professores)
+        table.append(tr)
+    });
+
+}
+
+
+
+////// PUT ///////////
+
+    const inputNome = document.getElementById('nome')
+    const inputNascimento = document.getElementById('nascimento')
+    const inputTelefone = document.getElementById('telefone')
+    const inputSexo = document.getElementById('sexo')
+
+    const botaoSalvar = document.getElementById('cadastrar')
+
+function pegarDados() {
+    let JSONProfessores = {
+        nome: inputNome.value,
+        data_nascimento: inputNascimento.value,
+        telefone: inputTelefone.value,
+        sexo: inputSexo.value
+    }
+
+    if(inputNome == '' || inputNascimento == '' || inputSexo == '' || inputTelefone == ''){
+        return false
+    }else{
+        return JSONProfessores
+    }
+
+    
+}
+
+async function inserirProfessor(){
+    const dadosProfessor = pegarDados()
+    if(dadosComunicados){
+        const resposta = await postComunicado(dadosComunicados)
+        if(resposta){
+            botaoSalvar.textContent = 'Comunicado inserido com sucesso!'
+        } 
+        else
+            botaoSalvar.textContent = 'Houve um erro!'
+        } else {
+            alert('Preencha todos os campos!')
+        }
+    }
+
+    botaoSalvar.addEventListener('click', inserirProfessor)
+
+preencherTela()
