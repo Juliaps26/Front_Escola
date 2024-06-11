@@ -22,6 +22,29 @@
 
     <link rel="stylesheet" href="/css/navegacao-adm/alunos.css">
 
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        background: '#262626'
+                    },
+                    spacing: {
+                        // Padronizando o tamanho das capas dos filmes 
+                        fotoW: '30px',
+                        fotoH: '450px',
+                        fotoAlunoW: '25vh',
+                        fotoAlunoH: '20vh'
+                    },
+                    fontFamily: {
+                        'popins': ["Poppins", 'sans-serif']
+                    }
+                }
+            }
+        }
+
+    </script>
+
 </head>
 
 <body class="">
@@ -92,6 +115,10 @@
                         <th scope="col" class="px-6 py-3">
                             E-mail
                         </th>
+                        <th scope="col" class="px-6 py-3">
+                            Sexo
+                        </th>
+
 
                         <th scope="col" class="px-6 py-3">
                             Excluir

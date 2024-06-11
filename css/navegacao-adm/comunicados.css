@@ -93,6 +93,7 @@ main {
     background-color: #7CAABA;
     border-radius: 6px;
     height: 4vh;
+    width: 28vh;
     align-items: center;
     justify-content: center;
     display: flex;
@@ -100,12 +101,13 @@ main {
     font-weight: 700;
     font-style: normal;
     font-size: 2vh;
+    position: absolute;
 
 }
 
 .card .descricao {
     display: flex;
-    margin-top: 2vh;
+    margin-top: 6vh;
 }
 
 
@@ -114,5 +116,5 @@ background-color: #f0f0f0;
 }
 
 .card .data{
-    
+    margin-top: 24vh;
 }

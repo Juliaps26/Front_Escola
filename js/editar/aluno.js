@@ -19,7 +19,7 @@ const mostrarPreview = () => {
 
 }
 
-localStorage.setItem('idAluno', 1)
+localStorage.getItem('idAluno')
 
 buttonPosterPreview.addEventListener('click', mostrarPreview)
 
@@ -33,8 +33,11 @@ async function inserirDados(){
     const nome = document.getElementById('nome')
     nome.value = aluno.nome
 
-    const dataNascimento = document.getElementById('data')
-    dataNascimento.value = aluno.data_nascimento
+    const data_nascimento = document.getElementById('data')
+    data_nascimento.classList.add('px-6', 'py-4', 'bg-white')
+    const data_nascimento_exemplo = aluno.data_nascimento
+    data_nascimento.value = data_nascimento_exemplo.substring(0,10)
+
 
     const email = document.getElementById('email')
     email.value = aluno.email
@@ -46,7 +49,7 @@ async function inserirDados(){
     cpf.value = aluno.cpf
 
     const sexo = document.getElementById('sexo')
-    sexo.value = aluno.id_sexo
+    sexo.value = aluno.sexo[0].id
 
 
 }
@@ -72,7 +75,7 @@ async function pegarDados(){
 
     const sexo = document.getElementById('sexo')
     JSONAluno.id_sexo = sexo.value
-
+console.log(JSONAluno);
    
     return JSONAluno
 }
@@ -85,7 +88,7 @@ async function atualizarAluno(){
     console.log(retorno)
     if(retorno){
         salvar.textContent='Aluno atualizado com sucesso!!'
-        // window.location.href='../html/cms.html'
+        window.location.href='../../html/navegacao-adm/alunos.html'
     }
     else
     salvar.textContent='Não foi possivel atualizar!'

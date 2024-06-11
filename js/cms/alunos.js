@@ -20,8 +20,8 @@ function criarTr(aluno){
 
      
     const foto = document.createElement('td')
-    foto.classList.add()
     const foto_aluno= document.createElement('img')
+    foto_aluno.classList.add('h-fotoAlunoW', 'w-fotoAlunoH')
     foto_aluno.src = aluno.foto
     
 
@@ -46,7 +46,12 @@ function criarTr(aluno){
     email.classList.add()
     email.textContent = aluno.email
 
-    
+    // Sexo
+
+    const sexo = document.createElement('td')
+    sexo.scope = 'row'
+    sexo.classList.add()
+    sexo.textContent = aluno.sexo[0].nome
 
     // Excluir o aluno 
     const id = aluno.id
@@ -56,7 +61,7 @@ function criarTr(aluno){
     deletar.classList.add('px-6', 'py-4', 'bg-white')
 
     const deletarImg = document.createElement('img')
-    deletarImg.classList.add('h-deletarh', 'w-deletarw')
+    deletarImg.classList.add('h-deletar', 'w-deletarw')
 
 
     // Imagem
@@ -75,7 +80,7 @@ function criarTr(aluno){
 
     const editarImg = document.createElement('img')
     editarImg.src = '/img/editar.png'
-    editarImg.classList.add('h-deletarh', 'w-deletarw')
+    editarImg.classList.add('h-fotoW', 'w-fotoW')
 
     const editarBtn = document.createElement('button')
     editarBtn.id = id
@@ -91,7 +96,7 @@ function criarTr(aluno){
     
 
 
-tr.append(matricula, foto_aluno, nome, data_nascimento, email, deletar, editar)
+tr.append(matricula, foto_aluno, nome, data_nascimento, email, sexo, deletar, editar)
    
     return tr
 
@@ -111,8 +116,9 @@ async function preencherTela(){
 //  Função para deletar aluno
 async function deletarAluno(){
     const idAluno=this.id
-    await deleteAluno(idAluno)
-    window.location.reload()
+    console.log(idAluno);
+    const retorno=    await deleteAluno(idAluno)
+    console.log(retorno);
 }
 
 // Editar

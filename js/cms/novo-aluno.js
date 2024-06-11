@@ -47,7 +47,7 @@ function pegarDados() {
         email : inputEmail.value,
         cpf: inputCPF.value,
         foto: inputPosterPreview.value,
-        id_sexo: inputSexo.value,
+        sexo: inputSexo.value,
         endereco:[
             {
                 logradouro: inputLogradouro.value,
@@ -85,7 +85,8 @@ async function inserirAluno() {
         console.log(retorno)
         if (retorno) {
             bntSalvar.textContent = 'Aluno inserido com sucesso!'
-            // window.location.href = '../html/cms.html'
+            window.location.href='../../html/navegacao-adm/alunos.html'
+
         }
         else
            bntSalvar.textContent = 'HOUVE UM ERRO!'

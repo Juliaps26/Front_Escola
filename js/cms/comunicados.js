@@ -35,6 +35,7 @@ async function inserirComunicado(){
         const resposta = await postComunicado(dadosComunicados)
         if(resposta){
             botaoSalvar.textContent = 'Comunicado inserido com sucesso!'
+            window.location.href = "../../html/navegacao-adm/comunicados.html"
         } 
         else
             botaoSalvar.textContent = 'Houve um erro!'
@@ -64,17 +65,25 @@ function createCard(comunicado) {
     descricao.className = 'descricao';
     card.appendChild(descricao);
 
-    // Criando contêiner para data 
     const data = document.createElement('p');
-    data.textContent = `Data: ${comunicado.data}`
+    data.textContent = `Data: ${formatarData(comunicado.data)}`;
     data.className = 'data';
-    card.appendChild(data)
+    card.appendChild(data);
 
 
     // Adiciona o contêiner de data e horário ao card
     card.appendChild(tema,descricao,data);
 
     return card;
+}
+
+
+function formatarData(dataString) {
+    const dataObj = new Date(dataString);
+    const dia = dataObj.getDate().toString().padStart(2, '0');
+    const mes = (dataObj.getMonth() + 1).toString().padStart(2, '0'); // Os meses são base 0, então adicionamos 1
+    const ano = dataObj.getFullYear();
+    return `${dia}/${mes}/${ano}`; // Formato DD/MM/AAAA
 }
 
 // Função para buscar os comunicados do banco de dados e criar os cards
